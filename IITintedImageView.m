@@ -38,19 +38,15 @@
     CGContextScaleCTM(context, 1, -1);
     CGContextTranslateCTM(context, 0, -rect.size.height);
 
-    //set the clipping area to the image
     CGContextClipToMask(context, rect, self.image.CGImage);
 
     if (self.tintColor) {
-        //set the fill color
         CGContextSetFillColor(context, CGColorGetComponents(self.tintColor.CGColor));
         CGContextFillRect(context, rect);
 
-        //blend mode overlay
         CGContextSetBlendMode(context, kCGBlendModeDestinationAtop);
     }
 
-    //draw the image
     CGContextDrawImage(context, rect, self.image.CGImage);
 }
 
