@@ -4,3 +4,7 @@
     imageView.image = [UIImage imageNamed:@"hello-world.png"];
     imageView.tint = [UIColor redColor];
 
+It's also `UIAppearance` ready!
+
+    [[IITintedImageView appearance] setTintColor:[UIColor greenColor]];
+
