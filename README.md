@@ -8,3 +8,4 @@ It's also `UIAppearance` ready!
 
     [[IITintedImageView appearance] setTintColor:[UIColor greenColor]];
 
+`IITintedImageView` is not a subclass of `UIImageView` because `UIImageView` optimizes rendering its attached `UIImage`, so there is no hook point for overriding that. This means you need to be careful when adding an `IITintedImageView` to your xib or storyboard; drag out a `UIView` (NOT a `UIImageView`) and set its class to `IITintedImageView`.
