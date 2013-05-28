@@ -46,8 +46,6 @@
 
         CGContextSetBlendMode(context, kCGBlendModeDestinationAtop);
     }
-
-    CGContextDrawImage(context, rect, self.image.CGImage);
 }
 
 @end
