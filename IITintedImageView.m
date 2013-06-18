@@ -31,6 +31,12 @@
     [self setNeedsDisplay];
 }
 
+-(void) flipTintColors {
+    UIColor *tempColor = self.secondaryTintColor;
+    self.secondaryTintColor = self.tintColor;
+    self.tintColor = tempColor;
+}
+
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
 
